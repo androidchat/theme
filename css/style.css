@@ -11,6 +11,10 @@
     color: #757575;
 }
 
+.title{
+	font-family: 'Roboto', sans-serif;
+}
+
 .icon-block {
   padding: 0 15px;
 }
@@ -34,7 +38,7 @@ nav ul a:hover {
   color: #6ab344;
 }
 
-green {
+.green {
     background-color: #6ab344;
 }
 
