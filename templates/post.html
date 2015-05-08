@@ -1,0 +1,32 @@
+<div class="row">
+    <div class="eight columns">
+        <div class="article">
+            <h1>{{ title|smartypants|widont }}</h1>
+            <p class="time">
+                Recorded on {{ date }}
+            </p>
+
+            {{ content|widont }}
+        </div>
+
+        <div class="pagination">
+            {{ entries:previous folder="blog" }}
+                {{ if !no_results }}
+                    <a href="{{ url }}" class="older">
+                        <small>Previously</small><br>
+                        {{ title|widont }}
+                    </a>
+                {{ endif }}
+            {{ /entries:previous }}
+
+            {{ entries:next folder="blog" }}
+                {{ if !no_results }}
+                    <a href="{{ url }}" class="newer">
+                        <small>Next Up</small><br>
+                        {{ title|widont }}
+                    </a>
+                {{ endif }}
+            {{ /entries:next }}
+        </div>
+    </div>
+</div>

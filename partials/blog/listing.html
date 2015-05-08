@@ -1,0 +1,10 @@
+<div class="article">
+    <h1>
+        {{ if use_context }}<a href="{{ url }}">{{ endif }}{{ title|widont }}{{ if use_context }}</a>{{ endif }}
+    </h1>
+    <p class="time">
+        Written on {{ date }}
+    </p>
+
+    {{ content|widont }}
+</div>
