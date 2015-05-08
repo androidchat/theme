@@ -1,0 +1,12 @@
+<div class="article">
+    <h1>
+        {{ if use_context }}<a href="{{ url }}">{{ endif }}{{ title|widont }}{{ if use_context }}</a>{{ endif }}
+    </h1>
+    <p class="time">
+        Written on {{ date }}
+    </p>
+
+    {{ content|chunk|widont }}
+
+    <p class="cta z-depth-1">As always, you may have questions or <strong><em>*gulp*</em></strong> demands. Please reach out to us on <a href="https://twitter.com/androidchat">Twitter</a> or join the conversation with us on <a href="https://androidchat.slack.com" target="_blank">Slack</a>!</p>
+</div>

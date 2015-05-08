@@ -1,0 +1,12 @@
+{{ entries:pagination folder="blog" limit="3" }}
+    {{ if next_page || previous_page }}
+      <div class="pagination clearfix">
+        {{ if next_page }}
+            <a href="{{ next_page }}" class="older">Older Posts</a>
+        {{ endif }}
+        {{ if previous_page }}
+            <a href="{{ previous_page }}" class="newer">Newer Posts</a>
+        {{ endif }}
+      </div>
+    {{ endif }}
+{{ /entries:pagination }}

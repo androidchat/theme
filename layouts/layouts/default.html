@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta content= "width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <title>
+    	{{ _site_name }}
+		{{ if segment_1 }}
+		– {{ title }}
+		{{ endif }}
+	</title>
+	{{ theme:css src="materialize.min" tag="true" }}
+	{{ theme:css src="style" tag="true" }}
+</head>
+
+<body>
+
+    {{ theme:partial src="navigation" }}
+
+    <div class="section no-pad-bot" id="index-banner">
+        {{ layout_content }}
+    </div>
+
+    <footer class="page-footer grey">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Android</h5>
+
+                    <p class="grey-text text-lighten-4">
+                        We are a team of...
+                    </p>
+                </div>
+
+                <div class="col l3 s12">
+                    <h5 class="white-text">Account</h5>
+
+                    <ul>
+                        <li>
+                            <a class="white-text" href="https://androidchat.slack.com/account/settings" target="_blank">Settings</a>
+                        </li>
+
+                        <li>
+                            <a class="white-text" href="https://androidchat.slack.com/account/notifications" target="_blank">Notifications</a>
+                        </li>
+
+                        <li>
+                            <a class="white-text" href="https://androidchat.slack.com/account/profile" target="_blank">Profile</a>
+                        </li>
+
+                        <li>
+                            <a class="white-text" href="https://androidchat.slack.com/account/photo" target="_blank">Photo</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col l3 s12">
+                    <h5 class="white-text">Social</h5>
+
+                    <ul>
+                        <li>
+                            <a class="white-text" href="https://twitter.com/androidchat" target="_blank">Twitter</a>
+                        </li>
+
+                        <li>
+                            <a class="white-text" href="https://github.com/androidchat" target="_blank">GitHub</a>
+                        </li>
+
+                        <li>
+                            <a class="white-text" href="#">RSS</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-copyright">
+            <div class="container">
+                Site By <a class="white-text text-lighten-3" href="http://codelabs.ca" target="_blank">CodeLabs</a> &
+            </div>
+        </div>
+    </footer>
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    {{ theme:js src="init" tag="true" }}
+    {{ theme:js src="bin/materialize" tag="true" }}
+</body>
+</html>
