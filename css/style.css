@@ -43,3 +43,9 @@ h1 {
     color: #6ab344;
     font-size: 1.6em;
 }
+
+.cta, .cta em, .cta a {
+  background-color: #6ab344;
+  color: #fff;
+  padding: 5px;
+}
