@@ -1,41 +1,46 @@
-<div class="row">
-    <div class="eight columns">
-        <div class="article">
-            <h1>{{ title|smartypants|widont }}</h1>
+<div class="container">
+    <div class="section">
+        <div class="row">
+            <div class="col s12 m4">
+                    <div class="article">
+                        <h1>{{ title|smartypants|widont }}</h1>
 
-            {{ content|widont }}
+                        {{ content|widont }}
 
-            {{ if _folder != '/' }}
-                {{ pages:previous folder="{_folder}" }}
-                    {{ unless no_results }}
-                        <div class="pagination">
-                            <a href="{{ url }}" class="older">
-                                <small>Previously</small><br>
-                                {{ title|widont }}
-                            </a>
+                        {{ if _folder != '/' }}
+                            {{ pages:previous folder="{_folder}" }}
+                                {{ unless no_results }}
+                                    <div class="pagination">
+                                        <a href="{{ url }}" class="older">
+                                            <small>Previously</small><br>
+                                            {{ title|widont }}
+                                        </a>
 
-                        {{ if !has_next }}
-                            </div>
+                                    {{ if !has_next }}
+                                        </div>
+                                    {{ endif }}
+                                {{ endif }}
+
+                            {{ /pages:previous }}
+
+                            {{ pages:next folder="{_folder}" }}
+                                {{ unless no_results }}
+                                    {{ if !has_previous }}
+                                        <div class="pagination">
+                                    {{ endif }}
+
+                                    <a href="{{ url }}" class="newer">
+                                        <small>Next Up</small><br>
+                                        {{ title|widont }}
+                                    </a>
+
+                                    </div>
+                                {{ endif }}
+                            {{ /pages:next }}
                         {{ endif }}
-                    {{ endif }}
-
-                {{ /pages:previous }}
-
-                {{ pages:next folder="{_folder}" }}
-                    {{ unless no_results }}
-                        {{ if !has_previous }}
-                            <div class="pagination">
-                        {{ endif }}
-
-                        <a href="{{ url }}" class="newer">
-                            <small>Next Up</small><br>
-                            {{ title|widont }}
-                        </a>
-
-                        </div>
-                    {{ endif }}
-                {{ /pages:next }}
-            {{ endif }}
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
