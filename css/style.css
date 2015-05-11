@@ -26,7 +26,7 @@ main {
 }
 
 .icon-block {
-  padding: 0 15px;
+    padding: 0 15px;
 }
 
 .brand-logo img {
@@ -35,17 +35,17 @@ main {
 }
 
 a {
-  color: #6ab344;
+    color: #6ab344;
 }
 
 nav ul a {
-  color: #757575;
-  border-bottom: 4px solid transparent;
+    color: #757575;
+    border-bottom: 4px solid transparent;
 }
 
 nav ul a:hover {
-  border-bottom-color: #6ab344;
-  color: #6ab344;
+    border-bottom-color: #6ab344;
+    color: #6ab344;
 }
 
 .green {
@@ -53,7 +53,11 @@ nav ul a:hover {
 }
 
 .cta, .cta em, .cta a {
-  background-color: #6ab344;
-  color: #fff;
-  padding: 5px;
+    background-color: #6ab344;
+    color: #fff;
+    padding: 5px;
+}
+
+.article h1 {
+    font-size: 2em;
 }
